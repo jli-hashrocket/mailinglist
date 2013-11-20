@@ -1,4 +1,6 @@
 
+=begin
+
 salutations = [
   'Mr.',
   'Mrs.',
@@ -6,7 +8,8 @@ salutations = [
   'Dr.',
   'Ms.'
 ]
-=begin
+=end
+
 salutations = [
   ['Mr.', 'Mrs.'],
   'Mrs.',
@@ -14,7 +17,6 @@ salutations = [
   ['Dr.'],
   'Ms.'
 ]
-=end
 first_names = [
   'John',
   'Jane',
