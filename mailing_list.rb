@@ -1,4 +1,4 @@
-=begin
+
 salutations = [
   'Mr.',
   'Mrs.',
@@ -6,7 +6,7 @@ salutations = [
   'Dr.',
   'Ms.'
 ]
-=end
+=begin
 salutations = [
   ['Mr.', 'Mrs.'],
   'Mrs.',
@@ -14,7 +14,7 @@ salutations = [
   ['Dr.'],
   'Ms.'
 ]
-
+=end
 first_names = [
   'John',
   'Jane',
@@ -39,11 +39,17 @@ addresses = [
   '4231 Cynthia Drive, Raynham, MA 02767'
 ]
 
+
 contacts =  salutations.zip(first_names,last_names,addresses)
 contact_hash = {}
+contact_item = {}
 contacts.each do |contact|
   contact_hash[:contact] = contact
-  title = contact_hash[:contact][0].is_a?(Array) ? contact_hash[:contact][0].join(" and ") : contact_hash[:contact][0]
-  puts title + " " + contact_hash[:contact][1] + " " + contact_hash[:contact][2]
-  puts contact_hash[:contact][3]
+  contact_item[:salutations] = contact_hash[:contact][0]
+  contact_item[:first_names] = contact_hash[:contact][1]
+  contact_item[:last_names] = contact_hash[:contact][2]
+  contact_item[:addresses] = contact_hash[:contact][3]
+  title = contact_item[:salutations].is_a?(Array) ? contact_item[:salutations].join(" and ") : contact_item[:salutations]
+  puts title + " " + contact_item[:first_names] + " " + contact_item[:last_names]
+  puts contact_item[:addresses]
 end
